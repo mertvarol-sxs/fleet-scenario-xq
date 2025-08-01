@@ -3,26 +3,5 @@ import pandas as pd
 from datetime import datetime
 
 def initialize_fleet_data():
-    data = [
-        {
-            "Reg": "TC-ABC",
-            "MSN": 12345,
-            "AC Type": "B737-800",
-            "DOM": datetime(2012, 5, 15),
-            "DOI": datetime(2013, 1, 1),
-            "DOE": pd.NaT,
-            "Lease Type": "OWN",
-            "Lease End": pd.NaT
-        },
-        {
-            "Reg": "TC-DEF",
-            "MSN": 23456,
-            "AC Type": "B737-8",
-            "DOM": datetime(2019, 3, 20),
-            "DOI": datetime(2019, 5, 1),
-            "DOE": pd.NaT,
-            "Lease Type": "OPS",
-            "Lease End": datetime(2027, 5, 1)
-        }
-    ]
+    data = [{'Reg': 'TC-A01', 'MSN': 10001, 'AC Type': 'B737-8', 'DOM': Timestamp('2011-02-10 00:00:00'), 'DOI': Timestamp('2012-02-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2029-01-01 00:00:00')}, {'Reg': 'TC-A02', 'MSN': 10002, 'AC Type': 'B737-10', 'DOM': Timestamp('2012-03-10 00:00:00'), 'DOI': Timestamp('2013-03-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}, {'Reg': 'TC-A03', 'MSN': 10003, 'AC Type': 'A320neo', 'DOM': Timestamp('2013-04-10 00:00:00'), 'DOI': Timestamp('2014-04-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OWN', 'Lease End': NaT}, {'Reg': 'TC-A04', 'MSN': 10004, 'AC Type': 'A321neo', 'DOM': Timestamp('2014-05-10 00:00:00'), 'DOI': Timestamp('2015-05-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2032-01-01 00:00:00')}, {'Reg': 'TC-A05', 'MSN': 10005, 'AC Type': 'B737-800', 'DOM': Timestamp('2015-06-10 00:00:00'), 'DOI': Timestamp('2016-06-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}, {'Reg': 'TC-A06', 'MSN': 10006, 'AC Type': 'B737-8', 'DOM': Timestamp('2016-07-10 00:00:00'), 'DOI': Timestamp('2017-07-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OWN', 'Lease End': NaT}, {'Reg': 'TC-A07', 'MSN': 10007, 'AC Type': 'B737-10', 'DOM': Timestamp('2017-08-10 00:00:00'), 'DOI': Timestamp('2018-08-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2030-01-01 00:00:00')}, {'Reg': 'TC-A08', 'MSN': 10008, 'AC Type': 'A320neo', 'DOM': Timestamp('2018-09-10 00:00:00'), 'DOI': Timestamp('2019-09-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}, {'Reg': 'TC-A09', 'MSN': 10009, 'AC Type': 'A321neo', 'DOM': Timestamp('2019-10-10 00:00:00'), 'DOI': Timestamp('2020-10-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OWN', 'Lease End': NaT}, {'Reg': 'TC-A10', 'MSN': 10010, 'AC Type': 'B737-800', 'DOM': Timestamp('2010-11-10 00:00:00'), 'DOI': Timestamp('2011-11-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2028-01-01 00:00:00')}, {'Reg': 'TC-A11', 'MSN': 10011, 'AC Type': 'B737-8', 'DOM': Timestamp('2011-01-10 00:00:00'), 'DOI': Timestamp('2012-01-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}, {'Reg': 'TC-A12', 'MSN': 10012, 'AC Type': 'B737-10', 'DOM': Timestamp('2012-02-10 00:00:00'), 'DOI': Timestamp('2013-02-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OWN', 'Lease End': NaT}, {'Reg': 'TC-A13', 'MSN': 10013, 'AC Type': 'A320neo', 'DOM': Timestamp('2013-03-10 00:00:00'), 'DOI': Timestamp('2014-03-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2031-01-01 00:00:00')}, {'Reg': 'TC-A14', 'MSN': 10014, 'AC Type': 'A321neo', 'DOM': Timestamp('2014-04-10 00:00:00'), 'DOI': Timestamp('2015-04-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}, {'Reg': 'TC-A15', 'MSN': 10015, 'AC Type': 'B737-800', 'DOM': Timestamp('2015-05-10 00:00:00'), 'DOI': Timestamp('2016-05-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OWN', 'Lease End': NaT}, {'Reg': 'TC-A16', 'MSN': 10016, 'AC Type': 'B737-8', 'DOM': Timestamp('2016-06-10 00:00:00'), 'DOI': Timestamp('2017-06-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2029-01-01 00:00:00')}, {'Reg': 'TC-A17', 'MSN': 10017, 'AC Type': 'B737-10', 'DOM': Timestamp('2017-07-10 00:00:00'), 'DOI': Timestamp('2018-07-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}, {'Reg': 'TC-A18', 'MSN': 10018, 'AC Type': 'A320neo', 'DOM': Timestamp('2018-08-10 00:00:00'), 'DOI': Timestamp('2019-08-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OWN', 'Lease End': NaT}, {'Reg': 'TC-A19', 'MSN': 10019, 'AC Type': 'A321neo', 'DOM': Timestamp('2019-09-10 00:00:00'), 'DOI': Timestamp('2020-09-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'OPS', 'Lease End': Timestamp('2032-01-01 00:00:00')}, {'Reg': 'TC-A20', 'MSN': 10020, 'AC Type': 'B737-800', 'DOM': Timestamp('2010-10-10 00:00:00'), 'DOI': Timestamp('2011-10-20 00:00:00'), 'DOE': NaT, 'Lease Type': 'FIN', 'Lease End': NaT}]
     return pd.DataFrame(data)
